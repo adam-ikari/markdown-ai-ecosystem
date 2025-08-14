@@ -168,6 +168,20 @@ int add(int a, int b) {
 ```
 
 ---
+transition: slide-up
+---
+
+## 脚注 (Footnotes)
+
+为文档添加注释和引用，提高内容的可信度和完整性
+
+```markdown
+这是一个带有脚注的句子[^1]
+
+[^1]: 这是脚注的内容
+```
+
+---
 
 # Markdown 扩展语法
 
@@ -201,6 +215,14 @@ Diagrams
 
 使用 Mermaid 扩展语法，可直接在 Markdown 中创建流程图、时序图等。
 
+Mermaid 语法的使用方式和代码块类似，代码块的 language 属性设置为 mermaid 即可。
+
+````text {monaco}
+\```mermaid
+  # 这里写 Mermaid 代码
+\```
+````
+
 ---
 transition: slide-up
 ---
@@ -208,8 +230,6 @@ transition: slide-up
 ## 流程图示例
 
 <br>
-
-<Cols :cols="2">
 
 ```text
 graph LR
@@ -226,9 +246,6 @@ graph LR
   C --> D[Result one]
   C --> E[Result two]
 ```
-
-</Cols>
-
 
 ---
 transition: slide-up
@@ -238,6 +255,8 @@ transition: slide-up
 
 <br>
 
+<Cols :cols="2">
+
 ```text
 sequenceDiagram
   participant A as 用户
@@ -254,9 +273,35 @@ sequenceDiagram
   B->>A: 登录成功
 ```
 
+</Cols>
+
+---
+transition: slide-up
 ---
 
-类图示例：
+## 类图示例：
+
+<br>
+
+<Cols :cols="2">
+
+```text
+classDiagram
+  Animal <|-- Duck
+  Animal <|-- Fish
+  Animal: +int age
+  Animal: +String gender
+  Animal: +isMammal()
+  class Duck{
+    +String beakColor
+    +swim()
+    +quack()
+  }
+  class Fish{
+    -int sizeInFeet
+    -canEat()
+  }
+```
 
 ```mermaid
 classDiagram
@@ -276,7 +321,23 @@ classDiagram
   }
 ```
 
-饼图示例：
+</Cols>
+
+---
+transition: slide-up
+---
+
+## 饼图示例：
+
+<br>
+
+<Cols :cols="2">
+
+```text
+pie title 销售分布
+  "产品A" : 42.86
+  "产品B" : 57.14
+```
 
 ```mermaid
 pie title 销售分布
@@ -284,10 +345,20 @@ pie title 销售分布
   "产品B" : 57.14
 ```
 
+</Cols>
+
+---
+transition: slide-up
+---
+
 状态图示例：
 
-```mermaid
-stateDiagram-v2
+<br>
+
+<Cols :cols="2">
+
+```text
+stateDiagram
   [*] --> Still
   Still --> [*]
   Still --> Moving
@@ -296,17 +367,19 @@ stateDiagram-v2
   Crash --> [*]
 ```
 
-### 脚注 (Footnotes)
-
-为文档添加注释和引用，提高内容的可信度和完整性
-
-```markdown
-这是一个带有脚注的句子[^1]
-
-[^1]: 这是脚注的内容
+```mermaid
+stateDiagram
+  [*] --> Still
+  Still --> [*]
+  Still --> Moving
+  Moving --> Still
+  Moving --> Crash
+  Crash --> [*]
 ```
 
-<br>
+</Cols>
+
+---
 
 ## AI 增强功能
 
