@@ -31,25 +31,15 @@ mdc: true
 
 Contents
 
-<br>
+<Toc columns="2" maxDepth="1"/>
 
-## 1. Markdown 简介与历史
+---
+layout: section
+___
 
-## 2. AI 时代对文档格式的新需求
+# Markdown 简介与历史
 
-## 3. Markdown 扩展语法
-
-## 4. Markdown 生态系统
-
-## 5. 实际应用案例
-
-## 6. 未来展望
-
-<style>
-  ul {
-    list-style: none;
-  }
-</style>
+Introduction to Markdown
 
 ---
 
@@ -59,9 +49,13 @@ Introduction to Markdown
 
 ## 什么是 Markdown？
 
+::v-clicks
+
 - **轻量级标记语言** - 易读易写的纯文本格式
 - **易于转换** - 可转换为有效的 XHTML 或 HTML 文档
 - **专注内容** - 让作者专注于写作而非格式
+
+::
 
 ---
 
@@ -75,9 +69,9 @@ Introduction to Markdown
 - 设计目标是尽可能易读、易写
 - 受到 Markdown 启发的众多变种和扩展
 
-<Alert>
+<Note>
 Markdown 的设计目标是让普通人也能轻松进行格式化写作
-</Alert>
+</Note>
 
 ---
 
@@ -85,15 +79,17 @@ Markdown 的设计目标是让普通人也能轻松进行格式化写作
 
 New Requirements in the AI Era
 
-<br>
-
 ## AI 驱动的文档处理
 
 - **语义理解** - AI 需要更好地理解文档结构和内容
 - **自动化生成** - AI 能够自动生成结构化文档
 - **智能交互** - 文档不仅是静态内容，还能与用户互动
 
-<br>
+---
+
+# AI 时代对文档格式的新需求
+
+New Requirements in the AI Era
 
 ## 协作与分享需求
 
@@ -101,7 +97,11 @@ New Requirements in the AI Era
 - **跨平台兼容** - 在不同设备和系统间无缝切换
 - **版本控制** - 清晰的变更历史和回溯能力
 
-<br>
+---
+
+# AI 时代对文档格式的新需求
+
+New Requirements in the AI Era
 
 ## 可扩展性要求
 
@@ -111,11 +111,13 @@ New Requirements in the AI Era
 
 ---
 
+## layout: section
+
 # Markdown 扩展语法
 
 Markdown Extended Syntax
 
-<br>
+---
 
 ## 常见扩展语法
 

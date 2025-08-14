@@ -32,7 +32,7 @@ const props = withDefaults(defineProps<Props>(), {
   type: "info",
   title: "",
   content: "",
-  icon: false
+  icon: false,
 });
 
 const typeMap = {
