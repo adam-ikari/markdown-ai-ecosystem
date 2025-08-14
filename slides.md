@@ -1,69 +1,484 @@
 ---
-# You can also start simply with 'default'
 theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
-# some information about your slides (markdown enabled)
-title: Welcome to Slidev
+title: AI时代的文档格式
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
+  ## Markdown的扩展语法和生态介绍
+  探索AI时代下Markdown的发展和生态系统
 
-  Learn more at [Sli.dev](https://sli.dev)
-# apply unocss classes to the current slide
 class: text-center
-# https://sli.dev/features/drawing
 drawings:
   persist: false
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
-# enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
-# open graph
-seoMeta:
-  # By default, Slidev will use ./og-image.png if it exists,
-  # or generate one from the first slide if not found.
-  ogImage: auto
-  # ogImage: https://cover.sli.dev
 ---
 
-# Welcome to Slidev
+# AI 时代的文档格式<br>Markdown 扩展语法和生态介绍
 
-Presentation slides for developers
+探索 AI 时代下 Markdown 的发展和生态系统
 
 <div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
-  Press Space for next page <carbon:arrow-right />
+  点击或按空格键继续 <carbon:arrow-right />
 </div>
 
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+这是幻灯片的首页，介绍主题为"AI时代的文档格式——Markdown的扩展语法和生态介绍"
 -->
 
 ---
-transition: fade-out
+
+# 目录
+
+Contents
+
+<br>
+
+## 1. Markdown 简介与历史
+
+## 2. AI 时代对文档格式的新需求
+
+## 3. Markdown 扩展语法
+
+## 4. Markdown 生态系统
+
+## 5. 实际应用案例
+
+## 6. 未来展望
+
+<style>
+  ul {
+    list-style: none;
+  }
+</style>
+
 ---
 
-# What is Slidev?
+# Markdown 简介与历史
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+Introduction to Markdown
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
+## 什么是 Markdown？
+
+- **轻量级标记语言** - 易读易写的纯文本格式
+- **易于转换** - 可转换为有效的 XHTML 或 HTML 文档
+- **专注内容** - 让作者专注于写作而非格式
+
+---
+
+# Markdown 简介与历史
+
+Introduction to Markdown
+
+## 历史发展
+
+- 2004 年由 John Gruber 创建
+- 设计目标是尽可能易读、易写
+- 受到 Markdown 启发的众多变种和扩展
+
+> Markdown 的设计目标是让普通人也能轻松进行格式化写作
+
+---
+
+# AI 时代对文档格式的新需求
+
+New Requirements in the AI Era
+
+<br>
+
+## AI 驱动的文档处理
+
+- **语义理解** - AI 需要更好地理解文档结构和内容
+- **自动化生成** - AI 能够自动生成结构化文档
+- **智能交互** - 文档不仅是静态内容，还能与用户互动
+
+<br>
+
+## 协作与分享需求
+
+- **实时协作** - 多人同时编辑和评论
+- **跨平台兼容** - 在不同设备和系统间无缝切换
+- **版本控制** - 清晰的变更历史和回溯能力
+
+<br>
+
+## 可扩展性要求
+
+- **自定义语法** - 满足特定领域需求
+- **插件生态** - 丰富的扩展功能
+- **工具链整合** - 与开发工具和流程深度集成
+
+---
+
+# Markdown 扩展语法
+
+Markdown Extended Syntax
+
+<br>
+
+## 常见扩展语法
+
+### 表格 (Tables)
+
+用于展示结构化数据，比传统文档中的表格更易维护和版本控制
+
+```markdown
+| 姓名 | 年龄 | 职业   |
+| ---- | ---- | ------ |
+| 张三 | 25   | 工程师 |
+| 李四 | 30   | 设计师 |
+```
+
+| 姓名 | 年龄 | 职业   |
+| ---- | ---- | ------ |
+| 张三 | 25   | 工程师 |
+| 李四 | 30   | 设计师 |
+
+### 任务列表 (Task Lists)
+
+用于创建待办事项清单，支持勾选状态，非常适合项目管理和进度跟踪
+
+```markdown
+- [x] 完成项目规划
+- [ ] 编写技术文档
+- [ ] 进行代码审查
+```
+
+- [x] 完成项目规划
+- [ ] 编写技术文档
+- [ ] 进行代码审查
+
+### 代码块增强 (Fenced Code Blocks)
+
+支持语法高亮和行号显示，对技术文档尤为重要
+
+````markdown
+```javascript {all|2|1-6|9|all}
+function highlightMe() {
+  console.log("这段代码会被高亮显示");
+  return "支持行号和特定行高亮";
+}
+```
+````
+
+```javascript {all|2|1-6|9|all}
+function highlightMe() {
+  console.log("这段代码会被高亮显示");
+  return "支持行号和特定行高亮";
+}
+```
+
+### 数学公式 (Mathematical Formulas)
+
+使用 LaTeX 语法，支持行内公式和块级公式，适合学术和科研文档
+
+```markdown
+行内公式: $E = mc^2$
+
+块级公式:
+
+$$
+\frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \frac{i}{\hbar}\hat{H}\Psi(\mathbf{r},t)
+$$
+```
+
+### 图表支持 (Diagrams)
+
+使用 Mermaid 等工具，可直接在 Markdown 中创建流程图、时序图等
+
+流程图示例：
+
+````markdown
+```mermaid
+graph LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+````
+
+```mermaid
+graph LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+时序图示例：
+
+```mermaid
+sequenceDiagram
+  participant A as 用户
+  participant B as 系统
+  A->>B: 登录请求
+  B->>A: 登录成功
+```
+
+类图示例：
+
+```mermaid
+classDiagram
+  Animal <|-- Duck
+  Animal <|-- Fish
+  Animal: +int age
+  Animal: +String gender
+  Animal: +isMammal()
+  class Duck{
+    +String beakColor
+    +swim()
+    +quack()
+  }
+  class Fish{
+    -int sizeInFeet
+    -canEat()
+  }
+```
+
+饼图示例：
+
+```mermaid
+pie title 销售分布
+  "产品A" : 42.86
+  "产品B" : 57.14
+```
+
+状态图示例：
+
+```mermaid
+stateDiagram-v2
+  [*] --> Still
+  Still --> [*]
+  Still --> Moving
+  Moving --> Still
+  Moving --> Crash
+  Crash --> [*]
+```
+
+### 脚注 (Footnotes)
+
+为文档添加注释和引用，提高内容的可信度和完整性
+
+```markdown
+这是一个带有脚注的句子[^1]
+
+[^1]: 这是脚注的内容
+```
+
+<br>
+
+## AI 增强功能
+
+### 元数据支持 (Front Matter)
+
+为 AI 处理提供上下文信息，便于内容分类和检索
+
+```markdown
+---
+title: 文档标题
+author: 作者姓名
+tags: [标签1, 标签2]
+date: 2023-01-01
+---
+```
+
+### 注释和标签 (Comments and Tags)
+
+便于内容分类和检索，提高文档的可管理性
+
+```markdown
+<!-- 这是一个注释，不会在最终文档中显示 -->
+
+# 标题 {#custom-id .class-name}
+```
+
+### 引用和链接 (References and Links)
+
+建立知识网络，便于 AI 理解文档间的关系
+
+```markdown
+这是一个[内部链接](#章节标题)和[外部链接](https://example.com)
+
+> 这是一个引用块，常用于引用他人观点
+```
+
+---
+
+# Markdown 生态系统
+
+# Markdown Ecosystem
+
+<br>
+
+## 编辑器工具
+
+- **Typora** - 所见即所得 Markdown 编辑器
+- **Obsidian** - 知识管理和笔记应用
+- **Mark Text** - 开源 Markdown 编辑器
+- **Zettlr** - 学术写作专用编辑器
+
+### VS Code 及其 Markdown 扩展
+
+- **Markdown All in One** - 提供快捷键、自动预览、目录生成等功能
+- **Markdown Preview Enhanced** - 增强的 Markdown 预览功能，支持数学公式、图表等
+- **Markdownlint** - Markdown 语法检查和规范工具
+- **Markdown Table Formatter** - 表格自动格式化
+- **Markdown Emoji** - 支持 Emoji 表情符号
+- **Markdown PDF** - 将 Markdown 文档导出为 PDF 格式
+- **Paste Image** - 方便在 Markdown 中插入图片
+- **Auto-Open Markdown Preview** - 自动打开 Markdown 预览窗口
+
+<br>
+
+## 替代 Office 套件的工具
+
+### 替代 Word 的文档工具
+
+- **Markdown** - 专注于内容创作的纯文本格式
+- **Typora/Obsidian** - 提供所见即所得的编辑体验
+- **HackMD/CodiMD** - 在线协作 Markdown 编辑器
+
+### 替代 Excel 的表格和数据工具
+
+- **CSV/TSV 文件** - 简单的纯文本表格格式
+- **Markdown 表格** - 内联表格语法
+- **Jupyter Notebook** - 数据科学和分析环境
+- **Airtable** - 结合数据库和电子表格功能
+
+### 替代 PowerPoint 的演示工具
+
+- **Slidev** - 我们正在使用的演示文稿工具
+- **Marp** - Markdown 转换为幻灯片
+- **Reveal.js** - HTML 演示框架，支持 Markdown
+- **Remark.js** - 简单的 Markdown 幻灯片工具
+
+<br>
+
+## 转换和发布工具
+
+- **Pandoc** - 万能文档转换器
+- **Hugo** - 静态网站生成器
+- **Jekyll** - 博客感知静态网站生成器
+- **Slidev** - 我们正在使用的演示文稿工具
+
+<br>
+
+## 协作和版本控制
+
+- **Git** - 版本控制系统的完美搭档
+- **GitHub/GitLab** - 在线协作平台
+- **Notion** - 集成文档和项目管理
+
+---
+
+# 实际应用案例
+
+# Real-world Applications
+
+<br>
+
+## 技术文档
+
+- **API 文档** - 使用 Markdown 编写，自动生成
+- **开发手册** - 团队内部知识库
+- **开源项目** - README 和 Wiki
+
+<br>
+
+## 学术和教育
+
+- **课程材料** - 教案、讲义、作业
+- **学术论文** - 配合工具链实现公式和引用
+- **在线教育** - MOOC 平台内容
+
+<br>
+
+## 商业应用
+
+- **产品文档** - 用户手册、帮助文档
+- **内容营销** - 博客、白皮书、案例研究
+- **内部沟通** - Wiki、会议记录
+
+---
+
+# 未来展望
+
+# Future Perspectives
+
+<br>
+
+## AI 与 Markdown 的深度融合
+
+- **智能写作助手** - 根据上下文提供语法建议
+- **自动格式化** - 根据内容类型自动应用样式
+- **语义增强** - 自动添加元数据和标签
+
+<br>
+
+## 新兴技术整合
+
+- **WebAssembly** - 更强大的本地处理能力
+- **区块链** - 文档确权和溯源
+- **AR/VR** - 沉浸式文档体验
+
+<br>
+
+## 标准化和互操作性
+
+- **统一扩展语法** - 减少碎片化
+- **跨平台兼容** - 更好的互操作性
+- **生态系统整合** - 工具链无缝衔接
+
+---
+
+# 总结
+
+# Conclusion
+
+<br>
+
+## Markdown 的核心优势
+
+- **简洁易用** - 专注于内容创作
+- **广泛支持** - 几乎所有平台都支持
+- **易于扩展** - 丰富的生态系统
+
+<br>
+
+## AI 时代的机遇
+
+- **智能化处理** - 更好的语义理解和生成
+- **自动化工具** - 提高创作效率
+- **协作增强** - 更好的团队协作体验
+
+<br>
+
+## 展望
+
+Markdown 作为轻量级标记语言，在 AI 时代将继续发挥重要作用，其简单性和可扩展性使其成为理想的文档格式选择。
+
+---
+
+# 谢谢！
+
+# Thank You!
+
+<br>
+
+## 有任何问题吗？
+
+### Questions & Discussion
+
 <br>
 <br>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/features/slide-scope-style
--->
+<div class="flex">
+  <div class="mx-auto">
+    <logos-markdown text="xl" class="opacity-50 m-2" />
+    <logos-ai text="xl" class="opacity-50 m-2" />
+    <logos-open-source text="xl" class="opacity-50 m-2" />
+  </div>
+</div>
 
 <style>
 h1 {
@@ -76,557 +491,3 @@ h1 {
   -moz-text-fill-color: transparent;
 }
 </style>
-
-<!--
-Here is another comment.
--->
-
----
-transition: slide-up
-level: 2
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/ui#navigation-bar)
-
-## Keyboard Shortcuts
-
-|                                                     |                             |
-| --------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                       | previous slide              |
-| <kbd>down</kbd>                                     | next slide                  |
-
-<!-- https://sli.dev/guide/animations.html#click-animation -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
-
----
-layout: two-cols
-layoutClass: gap-16
----
-
-# Table of contents
-
-You can use the `Toc` component to generate a table of contents for your slides:
-
-```html
-<Toc minDepth="1" maxDepth="1" />
-```
-
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
-
-::right::
-
-<Toc text-sm minDepth="1" maxDepth="2" />
-
----
-layout: image-right
-image: https://cover.sli.dev
----
-
-# Code
-
-Use code snippets and get the highlighting directly, and even types hover!
-
-```ts [filename-example.ts] {all|4|6|6-7|9|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="342" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-
-[Learn more](https://sli.dev/features/line-highlighting)
-
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
-<!--
-Notes can also sync with clicks
-
-[click] This will be highlighted after the first click
-
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
--->
-
----
-level: 2
----
-
-# Shiki Magic Move
-
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
-
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
-
-````md magic-move {lines: true}
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
-```
-
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
-  }
-}
-```
-
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
-}
-```
-
-Non-code blocks are ignored.
-
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
-```
-````
-
----
-
-# Components
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
----
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/guide/theme-addon#use-theme) and
-check out the [Awesome Themes Gallery](https://sli.dev/resources/theme-gallery).
-
----
-
-# Clicks Animations
-
-You can add `v-click` to elements to add a click animation.
-
-<div v-click>
-
-This shows up when you click the slide:
-
-```html
-<div v-click>This shows up when you click the slide.</div>
-```
-
-</div>
-
-<br>
-
-<v-click>
-
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
-
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
-
-</v-click>
-
-<div mt-20 v-click>
-
-[Learn more](https://sli.dev/guide/animations#click-animation)
-
-</div>
-
----
-
-# Motions
-
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev
-</div>
-```
-
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn more](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
-
-<div h-3 />
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{aligned}
-\nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
-\nabla \cdot \vec{B} &= 0 \\
-\nabla \times \vec{E} &= -\frac{\partial\vec{B}}{\partial t} \\
-\nabla \times \vec{B} &= \mu_0\vec{J} + \mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}
-\end{aligned}
-$$
-
-[Learn more](https://sli.dev/features/latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
-
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
-
----
-foo: bar
-dragPos:
-  square: 691,32,167,_,-16
----
-
-# Draggable Elements
-
-Double-click on the draggable elements to edit their positions.
-
-<br>
-
-###### Directive Usage
-
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-```
-
-<br>
-
-###### Component Usage
-
-```md
-<v-drag text-3xl>
-  <div class="i-carbon:arrow-up" />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
-
-<v-drag pos="663,206,261,_,-15">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
-  </div>
-</v-drag>
-
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-
-###### Draggable Arrow
-
-```md
-<v-drag-arrow two-way />
-```
-
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
-
----
-src: ./pages/imported-slides.md
-hide: false
----
-
----
-
-# Monaco Editor
-
-Slidev provides built-in Monaco Editor support.
-
-Add `{monaco}` to the code block to turn it into an editor:
-
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
-
-const arr = ref(emptyArray(10))
-```
-
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
-
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
-
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
-```
-
----
-layout: center
-class: text-center
----
-
-# Learn More
-
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
-
-<PoweredBySlidev mt-10 />
