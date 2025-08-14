@@ -75,7 +75,9 @@ Introduction to Markdown
 - 设计目标是尽可能易读、易写
 - 受到 Markdown 启发的众多变种和扩展
 
-> Markdown 的设计目标是让普通人也能轻松进行格式化写作
+<Alert>
+Markdown 的设计目标是让普通人也能轻松进行格式化写作
+</Alert>
 
 ---
 
@@ -472,13 +474,13 @@ Markdown 作为轻量级标记语言，在 AI 时代将继续发挥重要作用�
 <br>
 <br>
 
-<div class="flex">
+<!-- <div class="flex">
   <div class="mx-auto">
     <logos-markdown text="xl" class="opacity-50 m-2" />
     <logos-ai text="xl" class="opacity-50 m-2" />
     <logos-open-source text="xl" class="opacity-50 m-2" />
   </div>
-</div>
+</div> -->
 
 <style>
 h1 {
