@@ -31,11 +31,9 @@ mdc: true
 
 Contents
 
-<Toc columns="2" maxDepth="1"/>
-
 ---
 layout: section
-___
+---
 
 # Markdown 简介与历史
 
@@ -43,27 +41,23 @@ Introduction to Markdown
 
 ---
 
-# Markdown 简介与历史
+# Markdown 简介
 
 Introduction to Markdown
 
-## 什么是 Markdown？
+什么是 Markdown？
 
-::v-clicks
+<v-clicks>
 
 - **轻量级标记语言** - 易读易写的纯文本格式
 - **易于转换** - 可转换为有效的 XHTML 或 HTML 文档
 - **专注内容** - 让作者专注于写作而非格式
 
-::
+</v-clicks>
 
 ---
 
-# Markdown 简介与历史
-
-Introduction to Markdown
-
-## 历史发展
+# Markdown 历史发展
 
 - 2004 年由 John Gruber 创建
 - 设计目标是尽可能易读、易写
@@ -74,12 +68,16 @@ Markdown 的设计目标是让普通人也能轻松进行格式化写作
 </Note>
 
 ---
+layout: section
+---
 
 # AI 时代对文档格式的新需求
 
 New Requirements in the AI Era
 
-## AI 驱动的文档处理
+---
+
+# AI 驱动的文档处理
 
 - **语义理解** - AI 需要更好地理解文档结构和内容
 - **自动化生成** - AI 能够自动生成结构化文档
@@ -87,11 +85,7 @@ New Requirements in the AI Era
 
 ---
 
-# AI 时代对文档格式的新需求
-
-New Requirements in the AI Era
-
-## 协作与分享需求
+# 协作与分享需求
 
 - **实时协作** - 多人同时编辑和评论
 - **跨平台兼容** - 在不同设备和系统间无缝切换
@@ -99,29 +93,25 @@ New Requirements in the AI Era
 
 ---
 
-# AI 时代对文档格式的新需求
-
-New Requirements in the AI Era
-
-## 可扩展性要求
+# 可扩展性要求
 
 - **自定义语法** - 满足特定领域需求
 - **插件生态** - 丰富的扩展功能
 - **工具链整合** - 与开发工具和流程深度集成
 
 ---
+layout: section
+---
 
-## layout: section
+# Markdown 原生语法
 
-# Markdown 扩展语法
-
-Markdown Extended Syntax
+Markdown Native Syntax
 
 ---
 
-## 常见扩展语法
+# 表格
 
-### 表格 (Tables)
+Tables
 
 用于展示结构化数据，比传统文档中的表格更易维护和版本控制
 
@@ -132,50 +122,67 @@ Markdown Extended Syntax
 | 李四 | 30   | 设计师 |
 ```
 
+显示效果：
+
 | 姓名 | 年龄 | 职业   |
 | ---- | ---- | ------ |
 | 张三 | 25   | 工程师 |
 | 李四 | 30   | 设计师 |
 
-### 任务列表 (Task Lists)
+---
+
+# 任务列表
+
+Task Lists
 
 用于创建待办事项清单，支持勾选状态，非常适合项目管理和进度跟踪
 
 ```markdown
-- [x] 完成项目规划
-- [ ] 编写技术文档
+- [x] 完成项目规划 // 已完成
+- [ ] 编写技术文档 // 未完成
 - [ ] 进行代码审查
 ```
 
-- [x] 完成项目规划
-- [ ] 编写技术文档
-- [ ] 进行代码审查
+---
 
-### 代码块增强 (Fenced Code Blocks)
+# 代码块和代码高亮
 
-支持语法高亮和行号显示，对技术文档尤为重要
+Code Blocks and Code Highlighting
+
+Markdown 支持语法高亮和行号显示，对技术文档尤为重要。
 
 ````markdown
-```javascript {all|2|1-6|9|all}
-function highlightMe() {
-  console.log("这段代码会被高亮显示");
-  return "支持行号和特定行高亮";
+\```cpp
+int add(int a, int b) {
+return a + b;
 }
-```
+\```
 ````
 
-```javascript {all|2|1-6|9|all}
-function highlightMe() {
-  console.log("这段代码会被高亮显示");
-  return "支持行号和特定行高亮";
+显示效果
+
+```cpp
+int add(int a, int b) {
+  return a + b;
 }
 ```
 
-### 数学公式 (Mathematical Formulas)
+---
+
+# Markdown 扩展语法
+
+Markdown Expansion Syntax
+
+除了 Markdown 原生语法外，Markdown 还支持一些扩展语法。
+
+---
+
+# 数学公式语法
+
+Mathematical Formulas
 
 使用 LaTeX 语法，支持行内公式和块级公式，适合学术和科研文档
 
-```markdown
 行内公式: $E = mc^2$
 
 块级公式:
@@ -183,15 +190,35 @@ function highlightMe() {
 $$
 \frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \frac{i}{\hbar}\hat{H}\Psi(\mathbf{r},t)
 $$
+
+---
+transition: slide-up
+---
+
+# 图表支持语法
+
+Diagrams
+
+使用 Mermaid 扩展语法，可直接在 Markdown 中创建流程图、时序图等。
+
+---
+transition: slide-up
+---
+
+## 流程图示例
+
+<br>
+
+<Cols :cols="2">
+
+```text
+graph LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
 ```
 
-### 图表支持 (Diagrams)
-
-使用 Mermaid 等工具，可直接在 Markdown 中创建流程图、时序图等
-
-流程图示例：
-
-````markdown
 ```mermaid
 graph LR
   A[Hard edge] --> B(Round edge)
@@ -199,17 +226,25 @@ graph LR
   C --> D[Result one]
   C --> E[Result two]
 ```
-````
 
-```mermaid
-graph LR
-  A[Hard edge] --> B(Round edge)
-  B --> C{Decision}
-  C --> D[Result one]
-  C --> E[Result two]
+</Cols>
+
+
+---
+transition: slide-up
+---
+
+## 时序图示例：
+
+<br>
+
+```text
+sequenceDiagram
+  participant A as 用户
+  participant B as 系统
+  A->>B: 登录请求
+  B->>A: 登录成功
 ```
-
-时序图示例：
 
 ```mermaid
 sequenceDiagram
@@ -218,6 +253,8 @@ sequenceDiagram
   A->>B: 登录请求
   B->>A: 登录成功
 ```
+
+---
 
 类图示例：
 
