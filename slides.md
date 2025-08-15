@@ -183,9 +183,9 @@ int add(int a, int b) {
 
 ---
 
-# 元数据支持 (Front Matter)
+# 元数据
 
-<br>
+Front Matter
 
 为 AI 处理提供上下文信息，便于内容分类和检索。
 
@@ -200,12 +200,15 @@ date: 2023-01-01
 
 ---
 
-# 注释和标签 (Comments and Tags)
+# 注释和标签
+
+Comments and Tags
 
 便于内容分类和检索，提高文档的可管理性
 
-`````markdown
+```markdown
 <!-- 这是一个注释，不会在最终文档中显示 -->
+```
 
 ---
 
@@ -214,6 +217,8 @@ date: 2023-01-01
 Markdown Expansion Syntax
 
 除了 Markdown 原生语法外，Markdown 还支持一些扩展语法。
+
+这些扩展语法不断扩展 Markdown 的能力边界，形成了富有生命力的文档格式。
 
 ---
 
@@ -232,8 +237,8 @@ $$
 $$
 
 ---
-
-## transition: slide-up
+transition: slide-up
+---
 
 # 图表支持语法
 
@@ -248,13 +253,12 @@ Mermaid 语法的使用方式和代码块类似，代码块的 language 属性�
   # 这里写 Mermaid 代码
 \```
 ````
-`````
 
 ---
+transition: slide-up
+---
 
-## transition: slide-up
-
-## 流程图示例
+# 流程图示例
 
 <br>
 
@@ -275,10 +279,10 @@ graph LR
 ```
 
 ---
+transition: slide-up
+---
 
-## transition: slide-up
-
-## 时序图示例：
+# 时序图示例：
 
 <br>
 
@@ -303,10 +307,10 @@ sequenceDiagram
 </Cols>
 
 ---
+transition: slide-up
+---
 
-## transition: slide-up
-
-## 类图示例：
+# 类图示例：
 
 <br>
 
@@ -351,10 +355,44 @@ classDiagram
 </Cols>
 
 ---
+transition: slide-up
+---
 
-## transition: slide-up
+# 甘特图
 
-## 饼图示例：
+gantt
+
+<br>
+
+```text
+gantt
+    title A Gantt Diagram
+    dateFormat YYYY-MM-DD
+    section Section
+        A task          :a1, 2014-01-01, 30d
+        Another task    :after a1, 20d
+    section Another
+        Task in Another :2014-01-12, 12d
+        another task    :24d
+```
+
+```mermaid
+gantt
+    title A Gantt Diagram
+    dateFormat YYYY-MM-DD
+    section Section
+        A task          :a1, 2014-01-01, 30d
+        Another task    :after a1, 20d
+    section Another
+        Task in Another :2014-01-12, 12d
+        another task    :24d
+```
+
+---
+transition: slide-up
+---
+
+# 饼图示例：
 
 <br>
 
@@ -408,6 +446,102 @@ stateDiagram
 
 ---
 
+# 象限图
+
+quadrantChart
+
+<Cols :cols="2">
+
+```text
+quadrantChart
+    title Reach and engagement of campaigns
+    x-axis Low Reach --> High Reach
+    y-axis Low Engagement --> High Engagement
+    quadrant-1 We should expand
+    quadrant-2 Need to promote
+    quadrant-3 Re-evaluate
+    quadrant-4 May be improved
+    Campaign A: [0.3, 0.6]
+    Campaign B: [0.45, 0.23]
+    Campaign C: [0.57, 0.69]
+    Campaign D: [0.78, 0.34]
+    Campaign E: [0.40, 0.34]
+    Campaign F: [0.35, 0.78]
+```
+
+```mermaid
+quadrantChart
+    title Reach and engagement of campaigns
+    x-axis Low Reach --> High Reach
+    y-axis Low Engagement --> High Engagement
+    quadrant-1 We should expand
+    quadrant-2 Need to promote
+    quadrant-3 Re-evaluate
+    quadrant-4 May be improved
+    Campaign A: [0.3, 0.6]
+    Campaign B: [0.45, 0.23]
+    Campaign C: [0.57, 0.69]
+    Campaign D: [0.78, 0.34]
+    Campaign E: [0.40, 0.34]
+    Campaign F: [0.35, 0.78]
+```
+
+</Cols>
+
+---
+
+# Git 图
+
+git graph
+
+
+<Cols :cols="2">
+
+```text
+gitGraph
+    commit id: "ZERO"
+    branch develop
+    branch release
+    commit id:"A"
+    checkout main
+    commit id:"ONE"
+    checkout develop
+    commit id:"B"
+    checkout main
+    merge develop id:"MERGE"
+    commit id:"TWO"
+    checkout release
+    cherry-pick id:"MERGE" parent:"B"
+    commit id:"THREE"
+    checkout develop
+    commit id:"C"
+```
+
+```mermaid
+gitGraph
+    commit id: "ZERO"
+    branch develop
+    branch release
+    commit id:"A"
+    checkout main
+    commit id:"ONE"
+    checkout develop
+    commit id:"B"
+    checkout main
+    merge develop id:"MERGE"
+    commit id:"TWO"
+    checkout release
+    cherry-pick id:"MERGE" parent:"B"
+    commit id:"THREE"
+    checkout develop
+    commit id:"C"
+```
+
+</Cols>
+
+
+---
+
 # AI 增强功能
 
 ---
@@ -425,6 +559,10 @@ stateDiagram
 
 > 这是一个引用块，常用于引用他人观点
 ````
+
+```
+
+```
 
 ---
 
@@ -583,35 +721,12 @@ Markdown 作为轻量级标记语言，在 AI 时代将继续发挥重要作用�
 
 ---
 
-# 谢谢！
+## layout: end
 
-# Thank You!
+# 感谢聆听！
 
-<br>
+Thank You!
 
-## 有任何问题吗？
+```
 
-### Questions & Discussion
-
-<br>
-<br>
-
-<!-- <div class="flex">
-  <div class="mx-auto">
-    <logos-markdown text="xl" class="opacity-50 m-2" />
-    <logos-ai text="xl" class="opacity-50 m-2" />
-    <logos-open-source text="xl" class="opacity-50 m-2" />
-  </div>
-</div> -->
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
+```
