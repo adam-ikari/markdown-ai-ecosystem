@@ -806,7 +806,6 @@ Mathematical Formulas
 $$
 \frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \frac{i}{\hbar}\hat{H}\Psi(\mathbf{r},t)
 $$
-
 ```
 
 </div>
@@ -982,8 +981,6 @@ classDiagram
 
 gantt
 
-## Markdown
-
 ```text
 gantt
     title A Gantt Diagram
@@ -996,9 +993,7 @@ gantt
         another task    :24d
 ```
 
-## 显示效果
-
-```mermaid {scale: 0.75}
+```mermaid
 gantt
     title A Gantt Diagram
     dateFormat YYYY-MM-DD
