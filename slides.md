@@ -861,7 +861,7 @@ graph LR
 
 ## 显示效果
 
-```mermaid
+```mermaid {scale: 0.75}
 graph LR
   A[Hard edge] --> B(Round edge)
   B --> C{Decision}
@@ -897,7 +897,7 @@ sequenceDiagram
 
 ## 显示效果
 
-```mermaid
+```mermaid {scale: 0.75}
 sequenceDiagram
   participant A as 用户
   participant B as 系统
@@ -949,7 +949,7 @@ classDiagram
 
 ## 显示效果
 
-```mermaid
+```mermaid {scale: 0.75}
 classDiagram
 
   Animal <|-- Duck
@@ -998,7 +998,7 @@ gantt
 
 ## 显示效果
 
-```mermaid
+```mermaid {scale: 0.75}
 gantt
     title A Gantt Diagram
     dateFormat YYYY-MM-DD
@@ -1036,7 +1036,7 @@ pie title 销售分布
 
 ## 显示效果
 
-```mermaid
+```mermaid {scale: 0.75}
 pie title 销售分布
   "产品A" : 42.86
   "产品B" : 57.14
@@ -1051,8 +1051,6 @@ pie title 销售分布
 # 状态图
 
 State Diagram
-
-<br>
 
 <Cols :columns="2">
 
@@ -1076,7 +1074,7 @@ stateDiagram
 
 ## 显示效果
 
-```mermaid
+```mermaid {scale: 0.75}
 stateDiagram
   [*] --> Still
   Still --> [*]
@@ -1125,7 +1123,7 @@ quadrantChart
 
 ## 显示效果
 
-```mermaid
+```mermaid {scale: 0.75}
 quadrantChart
     title Reach and engagement of campaigns
     x-axis Low Reach --> High Reach
@@ -1184,7 +1182,7 @@ gitGraph
 
 ## 显示效果
 
-```mermaid
+```mermaid {scale: 0.75}
 gitGraph
     commit id: "ZERO"
     branch develop
